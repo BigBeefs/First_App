@@ -4,8 +4,7 @@ import streamlit as st  # Con il comando streamlit run app.py crea un server fro
 
 
 import pandas as pd
-import numpy as np
-import time
+
 
 st.text('Prova testo')
 
