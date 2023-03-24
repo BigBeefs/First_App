@@ -1,12 +1,13 @@
 import streamlit as st  # Con il comando streamlit run app.py crea un server front end
 
-st.text('Prova testo')
+
 
 
 import pandas as pd
 import numpy as np
+import time
 
-
+st.text('Prova testo')
 
 age = st.slider('How old are you?', 0, 130, 2)
 
@@ -24,7 +25,7 @@ chart_data = pd.DataFrame(d1)
 st.area_chart(chart_data)
 
 
-import time
+
 
 
 
