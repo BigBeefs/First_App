@@ -1,6 +1,6 @@
 import streamlit as st  # Con il comando streamlit run app.py crea un server front end
 
-
+import time
 
 
 import pandas as pd
