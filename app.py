@@ -19,7 +19,7 @@ number = st.number_input('Insert a number',0)
 d1={'a':[age,age1,number]}
 
 
-chart_data = pd.DataFrame(d1)
+chart_data = pd.DataFrame(d1)  
 
 st.area_chart(chart_data)
 
@@ -28,23 +28,27 @@ st.area_chart(chart_data)
 
 
 
-# progress_text = "Operation in progress. Please wait."
-# my_bar = st.progress(0, text=progress_text)
+progress_text = "Operation in progress. Please wait."
+my_bar = st.progress(0, text=progress_text)
 
-# for percent_complete in range(100):
+for percent_complete in range(100):
 
-#     if percent_complete < 99:
-#         time.sleep(0.1)
-#         my_bar.progress(percent_complete + 1, text=progress_text)
-#     else :
-#         my_bar.progress(percent_complete + 1, text='Complete')
+    if percent_complete < 99:
+        time.sleep(0.1)
+        my_bar.progress(percent_complete + 1, text=progress_text)
+    else :
+        my_bar.progress(percent_complete + 1, text='Complete')
         
 df = pd.read_csv('company_sales_data.csv')
 
+df = df[['month_number', 'facecream', 'facewash', 'toothpaste', 'bathingsoap',
+       'shampoo', 'moisturizer']]
 
 
-chart_data1 = pd.DataFrame(df)
 
+
+chart_data1 = pd.DataFrame(df)   
+ 
 st.line_chart(chart_data1)
 
 
